@@ -1,4 +1,5 @@
-<%= simple_form_for @new_link do |f| %>
-  <%= f.input :url %>
-  <%= f.button :submit %>
+<%= simple_form_for :new_link do |f| %>
+  <%= f.input :url, :label => false, :placeholder => 'Shorten A URL', 
+    :wrapper => false %>
+  <%= f.button :submit, "Shorten!" %>
 <% end %>

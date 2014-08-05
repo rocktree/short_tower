@@ -25,3 +25,23 @@ body > header {
     color: $color-light;
   }
 }
+
+#new-link {
+  border-bottom: 1px solid $color-4;
+
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+
+    input {
+      display: inline-block;
+      width: 300px;
+      margin: 0;
+      &[type=submit] {
+        width: 100px;
+        padding: 8px 10px;
+      }
+    }
+  }
+}
