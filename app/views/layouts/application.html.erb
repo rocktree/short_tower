@@ -18,7 +18,11 @@
 
     <%= render :partial => 'status' %>
 
-    <%= yield %>
+    <%= render :partial => 'header' %>
+
+    <div id="page-content">
+        <%= yield %>
+    </div>
 
     <%= javascript_include_tag 'application' %>
   </body>
