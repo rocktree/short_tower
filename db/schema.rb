@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20140805011705) do
     t.integer  "user_id"
     t.string   "url"
     t.string   "shortened_url"
+    t.integer  "visit_count"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

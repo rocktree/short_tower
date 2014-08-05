@@ -16,4 +16,13 @@ class Visit < ActiveRecord::Base
 
   belongs_to :link
 
+  # ------------------------------------------ Callbacks
+
+  after_save :cache_visit_count
+
+  def cache_visit_count
+    l = self.link
+    l.update(:visit_count => l.visits.size)
+  end
+
 end

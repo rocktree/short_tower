@@ -6,6 +6,7 @@
 #  user_id       :integer
 #  url           :string(255)
 #  shortened_url :string(255)
+#  visit_count   :integer
 #  created_at    :datetime
 #  updated_at    :datetime
 #
