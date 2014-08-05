@@ -11,20 +11,24 @@ App::Application.routes.draw do
 
   # ------------------------------------------ Admin
 
-  get '/admin' => 'admin#dashboard', :as => :admin_dashboard
-  namespace :admin do
-    resources :users, :except => [:show]
-  end
+  # get '/admin' => 'admin#dashboard', :as => :admin_dashboard
+  # namespace :admin do
+  #   resources :users, :except => [:show]
+  # end
 
   # ------------------------------------------ Public
 
-  # resources :posts
+  resources :links, :only => [:new, :create]
 
   # ------------------------------------------ JSON
 
   # scope 'json' do
   #   'posts' => 'posts#index'
   # end
+
+  # ------------------------------------------ Redirect Catch
+
+  get '/:shortened_url' => 'visits#create'
 
   # ------------------------------------------ Root
 
