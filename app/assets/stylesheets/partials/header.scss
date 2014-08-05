@@ -41,6 +41,7 @@ body > header {
       &[type=submit] {
         width: 100px;
         padding: 8px 10px;
+        @include transition-all;
       }
     }
   }
