@@ -1,9 +1,8 @@
-
 // ------------------------------------------ Vendor
 
 @import 'bourbon';
-@import 'normalize';
+@import 'bones/bones';
 
 // ------------------------------------------ Partials
 
-// @import 'partials/globals';
+@import 'partials/fonts';
