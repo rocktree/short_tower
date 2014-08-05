@@ -11,6 +11,8 @@
 
 class Link < ActiveRecord::Base
 
+  has_many :visits
+
   validates :url, :shortened_url, :presence => true
 
 end
