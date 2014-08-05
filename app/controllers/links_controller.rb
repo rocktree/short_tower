@@ -7,6 +7,10 @@ class LinksController < ApplicationController
   end
 
   def new
+    if user_signed_in?
+    else
+      render 'home/index'
+    end
   end
 
   def create

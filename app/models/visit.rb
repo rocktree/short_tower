@@ -12,6 +12,8 @@
 
 class Visit < ActiveRecord::Base
 
+  # ------------------------------------------ Associations
+
   belongs_to :link
 
 end

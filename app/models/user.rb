@@ -13,6 +13,10 @@
 #  last_sign_in_at        :datetime
 #  current_sign_in_ip     :string(255)
 #  last_sign_in_ip        :string(255)
+#  confirmation_token     :string(255)
+#  confirmed_at           :datetime
+#  confirmation_sent_at   :datetime
+#  unconfirmed_email      :string(255)
 #  is_admin               :boolean          default(FALSE)
 #  created_at             :datetime
 #  updated_at             :datetime
@@ -22,13 +26,12 @@ class User < ActiveRecord::Base
 
   # ------------------------------------------ Devise
 
-  # Include default devise modules. Others available are:
-  # :lockable, :timeoutable, :omniauthable, :confirmable, :registerable
   devise :database_authenticatable, :recoverable, :rememberable, :trackable, 
-         :validatable
+         :validatable, :confirmable, :registerable
 
-  # ------------------------------------------ Scopes
+  # ------------------------------------------ Associations
 
-  scope :admins, -> { where(:is_admin => true) }
+  has_many :links
+
 
 end
