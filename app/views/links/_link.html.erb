@@ -1,11 +1,17 @@
 <article class="link">
+  <span class="meta">
+    <%= time_ago_in_words(link.created_at) %> ago //
+    <%= link.visit_count %> <%= link.visit_count == 1 ? 'click' : 'clicks' %>
+  </span>
   <h2><%= link_to link.url, link.url, :target => :blank %></h2>
-  <h3 class="link">
-    <%= link_to visit_url(link.shortened_url), visit_path(link.shortened_url), 
-      :id => "copy-target-#{link.id}" %>
-  </h3>
-  <button class='copy-button' data-clipboard-target="copy-target-<%= link.id %>" 
-    id="copy-link-<%= link.id %>" title='Click me to copy to clipboard.'>
-    <b>Copy To Clipboard...</b>
-  </button>
+  <div class="short-link-container">
+    <h3 class="link">
+      <%= link_to visit_url(link.shortened_url), visit_path(link.shortened_url), 
+        :id => "copy-target-#{link.id}", :taget => :blank %>
+    </h3>
+    <button class='copy-button' data-clipboard-target="copy-target-<%= link.id %>" 
+      id="copy-link-<%= link.id %>" title='Click me to copy to clipboard.'>
+      Copy to Clipboard
+    </button>
+  </div>
 </article>

@@ -1,0 +1,52 @@
+article.link {
+  position: relative;
+  padding: 25px;
+  @include box-sizing(border-box);
+  border: 1px solid $color-4;
+
+  span.meta {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: $color-light-darkest;
+    font-size: 14px;
+  }
+
+  h2 {
+    margin: 0 0 10px 0;
+    line-height: 0;
+    a {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+
+  .short-link-container {
+    vertical-align: middle;
+    margin: 15px 0 0 0;
+
+    h3 {
+      display: inline-block;
+      margin: 0 10px 0 0;
+      line-height: 0;
+      vertical-align: middle;
+      a {
+        font-size: 18px;
+      }
+    }
+
+    button {
+      display: inline-block;
+      margin: 0;
+      padding: 5px 10px;
+      vertical-align: middle;
+      font-size: 14px;
+      border-radius: 3px;
+      background: $color-3;
+      @include transition-all;
+      &:hover {
+        background: $color-3-darker;
+      }
+    }
+  }
+}
