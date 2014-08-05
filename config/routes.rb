@@ -28,7 +28,7 @@ App::Application.routes.draw do
 
   # ------------------------------------------ Redirect Catch
 
-  get '/:shortened_url' => 'visits#create'
+  get '/:shortened_url' => 'visits#create', :as => :visit
 
   # ------------------------------------------ Root
 
