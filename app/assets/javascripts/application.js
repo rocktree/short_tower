@@ -1,5 +1,6 @@
 //= require jquery
 //= require jquery_ujs
+//= require zeroclipboard
 //= require underscore
 //= require backbone
 //= require app

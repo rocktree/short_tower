@@ -1,4 +1,11 @@
 <article class="link">
   <h2><%= link_to link.url, link.url, :target => :blank %></h2>
-  <h3><%= link_to visit_url(link.shortened_url), visit_path(link.shortened_url) %></h3>
+  <h3 class="link">
+    <%= link_to visit_url(link.shortened_url), visit_path(link.shortened_url), 
+      :id => "copy-target-#{link.id}" %>
+  </h3>
+  <button class='copy-button' data-clipboard-target="copy-target-<%= link.id %>" 
+    id="copy-link-<%= link.id %>" title='Click me to copy to clipboard.'>
+    <b>Copy To Clipboard...</b>
+  </button>
 </article>

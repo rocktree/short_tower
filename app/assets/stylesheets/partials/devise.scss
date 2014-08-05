@@ -1,0 +1,47 @@
+.devise-form {
+  margin: 0 auto;
+  max-width: 500px;
+
+  h2 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: $color-5;
+  }
+
+  form {
+
+    label {
+      margin: 0;
+      color: $color-5;
+      abbr {
+        border-bottom: none;
+        color: $color-5;
+      }
+    }
+    input {
+      margin: 0 0 15px 0;
+      &[type=checkbox] {
+        margin-right: 5px;
+      }
+      &[type=submit] {
+        background: $color-1;
+        @include transition-all;
+        &:hover, &:active {
+          background: $color-1-dark;
+        }
+      }
+    }
+  }
+
+  a {
+    border-bottom: 1px dotted $color-1;
+    display: inline-block;
+    margin: 5px 0;
+    &:hover {
+      color: $color-1-dark;
+      border-bottom: 1px solid $color-1-dark;
+    }
+  }
+}

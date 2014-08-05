@@ -22,6 +22,7 @@ gem 'jbuilder'
 gem 'simple_form'
 gem 'wysihtml5-rails'
 gem 'pickadate-rails'
+gem 'zeroclipboard-rails'
 
 # ------------------------------------------ Utilities
 

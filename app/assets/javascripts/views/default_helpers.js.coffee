@@ -5,6 +5,7 @@ class App.Views.DefaultHelpers extends Backbone.View
   initialize: =>
     @disabledLinks()
     @fadeOutNotices()
+    @copyToClipboard()
 
   disabledLinks: =>
     $('a.disabled').click (e) ->
@@ -14,3 +15,14 @@ class App.Views.DefaultHelpers extends Backbone.View
     setTimeout () =>
       $('.notice, .alert').fadeOut()
     , 3500
+
+  copyToClipboard: =>
+    for button in $('.copy-button')
+      new ZeroClipboard($(button))
+      $(button).click (e) ->
+        $('body').prepend """
+          <p class="notice">
+            Copied successfully!
+          </p>
+          """
+        @fadeOutNotices()

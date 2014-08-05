@@ -1,13 +1,13 @@
 class LinksController < ApplicationController
 
-  before_filter :authenticate_user!, :except => [:new]
+  before_filter :authenticate_user! #, :except => [:new]
 
   def new
-    if user_signed_in?
-      @new_link = Link.new
-    else
-      render 'home/index'
-    end
+    # if user_signed_in?
+    #   @new_link = Link.new
+    # else
+    #   render 'home/index'
+    # end
   end
 
   def create
@@ -28,7 +28,7 @@ class LinksController < ApplicationController
   private
 
     def create_params
-      params.require(:link).permit(:url)
+      params.require(:new_link).permit(:url)
     end
 
 end

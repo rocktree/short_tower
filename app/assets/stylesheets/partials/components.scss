@@ -1,0 +1,13 @@
+p.notice, p.alert {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 25px 25px;
+  @include box-sizing(border-box);
+  text-align: center;
+  color: $color-light;
+  background: rgba($color-2, 0.85);
+  z-index: 9999;
+}

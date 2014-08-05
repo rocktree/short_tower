@@ -6,7 +6,7 @@
 #
 development: &default
   site:
-    email: "sean@rocktree.us"
+    email: "noreply@rocktree.us"
 
 test:
   <<: *default

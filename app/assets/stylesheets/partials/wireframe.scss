@@ -6,7 +6,11 @@ body {
   }
 
   #page-content {
-    margin: 0;
+    margin: 42px 0 0 0;
     padding: 25px 50px;
+  }
+
+  #new-link+#page-content {
+    margin: 0;
   }
 }
