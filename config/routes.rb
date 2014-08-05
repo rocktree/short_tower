@@ -18,7 +18,7 @@ App::Application.routes.draw do
 
   # ------------------------------------------ Public
 
-  resources :links, :only => [:new, :create]
+  resources :links, :only => [:show, :create], :param => :shortened_url
 
   # ------------------------------------------ JSON
 
@@ -32,6 +32,6 @@ App::Application.routes.draw do
 
   # ------------------------------------------ Root
 
-  root :to => 'home#index'
+  root :to => 'links#new'
 
 end

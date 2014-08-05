@@ -15,4 +15,8 @@ class Link < ActiveRecord::Base
 
   validates :url, :shortened_url, :presence => true
 
+  def to_param
+    shortened_url
+  end
+
 end
